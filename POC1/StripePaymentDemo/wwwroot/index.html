@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe Payment Demo</title>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <button id="pay-button">Pay Now</button>
+
+    <script>
+        document.getElementById('pay-button').addEventListener('click', async () => {
+            const response = await fetch('/api/payments/create-payment-intent', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ amount: 1000 }) // Amount in cents
+            });
+            const { clientSecret } = await response.json();
+
+            const stripe = Stripe('your_publishable_key'); // Replace with your actual publishable key
+            const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+                payment_method: {
+                    card: {
+                        number: '4242424242424242',
+                        exp_month: 12,
+                        exp_year: 2024,
+                        cvc: '123'
+                    }
+                }
+            });
+
+            if (error) {
+                console.error(error);
+            } else {
+                console.log('Payment successful:', paymentIntent);
+            }
+        });
+    </script>
+</body>
+</html>

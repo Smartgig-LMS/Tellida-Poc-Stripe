@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "NAWSfC893z/3V+4Qz9bjO13nVR0tE2B1/Yr0vf0HvBs=",
+  "Source": "StripePaymentDemo",
+  "BasePath": "_content/StripePaymentDemo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "StripePaymentDemo\\wwwroot",
+      "Source": "StripePaymentDemo",
+      "ContentRoot": "C:\\Users\\SSD\\Desktop\\Files\\Projects\\Tellida POC\\POC1\\StripePaymentDemo\\wwwroot\\",
+      "BasePath": "_content/StripePaymentDemo",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\SSD\\Desktop\\Files\\Projects\\Tellida POC\\POC1\\StripePaymentDemo\\wwwroot\\index.html",
+      "SourceId": "StripePaymentDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\SSD\\Desktop\\Files\\Projects\\Tellida POC\\POC1\\StripePaymentDemo\\wwwroot\\",
+      "BasePath": "_content/StripePaymentDemo",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    }
+  ]
+}
