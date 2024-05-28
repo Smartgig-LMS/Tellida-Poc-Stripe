@@ -42,7 +42,15 @@
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ amount: 5000 }) // Amount in cents (5000 cents = $50.00)
+                    body: JSON.stringify({
+                        amount: 5000, // Amount in cents (5000 cents = $50.00)
+                        description: 'Description of the goods or services',
+                        customerName: 'Customer Name',
+                        customerAddressLine1: 'Customer Address Line 1',
+                        customerCity: 'Customer City',
+                        customerPostalCode: 'Customer Postal Code',
+                        customerCountry: 'US' // Use valid two-letter country code here
+                    })
                 });
 
                 const { clientSecret } = await response.json();
