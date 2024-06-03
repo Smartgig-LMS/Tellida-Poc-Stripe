@@ -3,7 +3,7 @@ services:
  organisationdev:
   image: stripeimage3
   ports:
-   - 5000:5000
+   - 7011:8080
   container_name: tellida_organisationdev
   deploy:
     replicas: 1
