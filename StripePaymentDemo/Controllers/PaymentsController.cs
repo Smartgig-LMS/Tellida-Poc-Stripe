@@ -65,7 +65,7 @@ namespace StripePaymentDemo.Controllers
         public async Task<IActionResult> Index()
         {
             var json = await new StreamReader(HttpContext.Request.Body).ReadToEndAsync();
-            const string endpointSecret = "we_1PLMNsSHxpNSNK1o8grTquiy";
+            const string endpointSecret = "whsec_UiEqwzpzaeUorfimWa0M8UvSmj8putQn";
             try
             {
                 var stripeEvent = EventUtility.ParseEvent(json);
