@@ -55,8 +55,6 @@ namespace StripePaymentDemo.Controllers
             catch (Exception ex)
             {
                 // Handle any other exceptions
-                // Handle any other exceptions
-
                 return StatusCode(500, new { error = "An error occurred while processing the payment." });
             }
         }
