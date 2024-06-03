@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Stripe;
+using System;
+using System.IO;
+using System.Threading.Tasks;
 
 namespace StripePaymentDemo.Controllers
 {
@@ -55,42 +58,52 @@ namespace StripePaymentDemo.Controllers
             catch (Exception ex)
             {
                 // Handle any other exceptions
-                // Handle any other exceptions
-
                 return StatusCode(500, new { error = "An error occurred while processing the payment." });
             }
         }
         [HttpPost("webhook")]
-        public async Task<IActionResult> StripeWebhook()
+        public async Task<IActionResult> Index()
         {
             var json = await new StreamReader(HttpContext.Request.Body).ReadToEndAsync();
+            const string endpointSecret = "we_1PLMNsSHxpNSNK1o8grTquiy";
             try
             {
-                var stripeEvent = EventUtility.ConstructEvent(
-                    json,
-                    Request.Headers["Stripe-Signature"],
-                    _stripeOptions.WebhookSecret
-                );
+                var stripeEvent = EventUtility.ParseEvent(json);
+                var signatureHeader = Request.Headers["Stripe-Signature"];
+
+                stripeEvent = EventUtility.ConstructEvent(json, signatureHeader, endpointSecret);
 
                 if (stripeEvent.Type == Events.PaymentIntentSucceeded)
                 {
                     var paymentIntent = stripeEvent.Data.Object as PaymentIntent;
-                    // Handle successful payment intent
+                    Console.WriteLine("A successful payment for {0} was made.", paymentIntent.Amount);
+                    // Then define and call a method to handle the successful payment intent.
+                    // handlePaymentIntentSucceeded(paymentIntent);
                 }
-                else if (stripeEvent.Type == Events.PaymentIntentPaymentFailed)
+                else if (stripeEvent.Type == Events.PaymentMethodAttached)
                 {
-                    var paymentIntent = stripeEvent.Data.Object as PaymentIntent;
-                    // Handle failed payment intent
+                    var paymentMethod = stripeEvent.Data.Object as PaymentMethod;
+                    // Then define and call a method to handle the successful attachment of a PaymentMethod.
+                    // handlePaymentMethodAttached(paymentMethod);
                 }
-
+                else
+                {
+                    Console.WriteLine("Unhandled event type: {0}", stripeEvent.Type);
+                }
                 return Ok();
             }
-            catch (StripeException ex)
+            catch (StripeException e)
             {
+                Console.WriteLine("Error: {0}", e.Message);
                 return BadRequest();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500);
             }
         }
     }
+}
 
     public class CreatePaymentIntentRequest
     {
@@ -102,4 +115,12 @@ namespace StripePaymentDemo.Controllers
         public string CustomerPostalCode { get; set; } // Customer postal code
         public string CustomerCountry { get; set; } // Customer country
     }
+
+public class StripeOptions
+{
+    public string SecretKey { get; set; }
+    public string WebhookSecret { get; set; }
 }
+
+
+

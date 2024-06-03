@@ -1,43 +1,17 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Configuration;
-using System.Security.Policy;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container
-builder.Services.AddControllers();
-builder.Services.Configure<StripeOptions>(builder.Configuration.GetSection("Stripe"));
-
-var app = builder.Build();
-
-// Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
+namespace StripePaymentDemo
 {
-    app.UseDeveloperExceptionPage();
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            CreateWebHostBuilder(args).Build().Run();
+        }
+
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>();
+    }
 }
-else
-{
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
-}
-
-app.UseHttpsRedirection();
-app.UseStaticFiles(); // Enable serving static files from wwwroot
-
-app.UseRouting();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
-
-// Class to bind Stripe options from appsettings.json
-public class StripeOptions
-{
-    public string SecretKey { get; set; }
-    public string WebhookSecret { get; set; }
-}
-
