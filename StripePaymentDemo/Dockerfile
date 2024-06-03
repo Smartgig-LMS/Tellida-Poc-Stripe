@@ -16,7 +16,7 @@ WORKDIR /app
 COPY --from=build /app/out ./
 
 # Expose port 80 for the application
-EXPOSE 8080
+EXPOSE 5000
 
 # Command to run the application
 ENTRYPOINT ["dotnet", "StripePaymentDemo.dll"] 
