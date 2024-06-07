@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "vCeZDPxLPn2NYkZf1XAPeealqiiMHD7vtTjZ4Xqx6oviDpLz4v7WD0Zi+VRFdmuSr6mGmvYuRjI5gcUUXsmSMA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SSD\\Desktop\\Files\\Projects\\RazorPay\\RazorPay_Payment\\RazorPay_Payment.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SSD\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\SSD\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\SSD\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\SSD\\.nuget\\packages\\razorpay.core\\1.0.2\\razorpay.core.1.0.2.nupkg.sha512",
+    "C:\\Users\\SSD\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\SSD\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\SSD\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\SSD\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

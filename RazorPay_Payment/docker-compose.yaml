@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+ organisationdev:
+  image: stripeimage3
+  ports:
+   - 7182:7182
+  container_name: tellida_organisationdev
+  deploy:
+    replicas: 1
+  restart: always

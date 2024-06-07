@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "FXEKeMrB0yFq3XuBne5P5jmpR018VS0126ouoWDYAwY=",
+  "Source": "RazorPay_Payment",
+  "BasePath": "_content/RazorPay_Payment",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
