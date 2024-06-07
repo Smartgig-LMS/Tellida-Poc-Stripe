@@ -19,4 +19,4 @@ COPY --from=build /app/out ./
 EXPOSE 7182
 
 # Command to run the application
-ENTRYPOINT ["dotnet", "StripePaymentDemo.dll"] 
+ENTRYPOINT ["dotnet", "RazorPay_Payment.dll"] 

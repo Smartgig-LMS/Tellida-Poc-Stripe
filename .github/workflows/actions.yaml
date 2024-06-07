@@ -20,7 +20,7 @@ jobs:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: ${{ secrets.TARGET_DIR }}
+          TARGET: ${{ secrets.TARGET_DIR2 }}
        
       - name: Executing remote ssh commands using ssh key
         uses: appleboy/ssh-action@master
@@ -29,6 +29,6 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            cd home
+            cd razorpay
             chmod +x start.sh
             ./start.sh &

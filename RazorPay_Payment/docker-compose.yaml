@@ -1,10 +1,10 @@
 version: '3.8'
 services:
  organisationdev:
-  image: stripeimage3
+  image: razorimage3
   ports:
    - 7182:7182
-  container_name: tellida_organisationdev
+  container_name: razor_organisationdev
   deploy:
     replicas: 1
   restart: always
