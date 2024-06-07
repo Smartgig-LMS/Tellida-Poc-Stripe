@@ -16,7 +16,7 @@ WORKDIR /app
 COPY --from=build /app/out ./
 
 # Expose port 80 for the application
-EXPOSE 7182
+EXPOSE 5169
 
 # Command to run the application
 ENTRYPOINT ["dotnet", "RazorPay_Payment.dll"] 
