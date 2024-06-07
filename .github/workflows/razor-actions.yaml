@@ -1,6 +1,8 @@
 name: Razorpay Main Branch Workflow
 on:
   workflow_dispatch:
+    branchs: 
+      - razorpay
     inputs:
       trigger:
         description: 'Trigger the workflow manually'
