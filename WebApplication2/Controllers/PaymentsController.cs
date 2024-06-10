@@ -103,7 +103,7 @@ public class PaymentsController : Controller
 
     private bool VerifyWebhookSignature(IHeaderDictionary headers, RazorpayWebhookPayload payload)
     {
-        string webhookSecret = "your_webhook_secret"; // Replace with your actual webhook secret from Razorpay
+        string webhookSecret = "A$123^HG*"; // Replace with your actual webhook secret from Razorpay
         string signature = headers["X-Razorpay-Signature"];
         string payloadJson = JsonConvert.SerializeObject(payload);
 
