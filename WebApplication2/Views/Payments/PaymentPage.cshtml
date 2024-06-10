@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Payment Page";
+}
+
+<h2>Payment Page</h2>
+
+<p>Order ID: @ViewBag.OrderId</p>
+<p>Amount: @ViewBag.Amount</p>
+<p>Currency: @ViewBag.Currency</p>
+
+<form id="paymentForm" action="/Payments/VerifyPayment" method="post">
+    <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id">
+    <input type="hidden" name="razorpay_order_id" id="razorpay_order_id">
+    <input type="hidden" name="razorpay_signature" id="razorpay_signature">
+
+    <button id="rzp-button1" type="button">Pay with Razorpay</button>
+</form>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+    var options = {
+        "key": "@ViewBag.RazorpayKey",
+        "amount": "@ViewBag.Amount", // Amount is in currency subunits. Default is INR.
+        "currency": "@ViewBag.Currency",
+        "name": "Your Company Name",
+        "description": "Test transaction",
+        "order_id": "@ViewBag.OrderId", // This is the Order ID returned by Razorpay.
+        "handler": function (response) {
+            // This function handles the payment success
+            document.getElementById('razorpay_payment_id').value = response.razorpay_payment_id;
+            document.getElementById('razorpay_order_id').value = response.razorpay_order_id;
+            document.getElementById('razorpay_signature').value = response.razorpay_signature;
+
+            // Submit the form
+            document.getElementById('paymentForm').submit();
+        },
+        "prefill": {
+            "name": "Test User",
+            "email": "test.user@example.com"
+        },
+        "theme": {
+            "color": "#F37254"
+        }
+    };
+
+    var rzp1 = new Razorpay(options);
+    rzp1.on('payment.failed', function (response) {
+        alert("Payment failed: " + response.error.description);
+    });
+
+    document.getElementById('rzp-button1').onclick = function (e) {
+        rzp1.open();
+        e.preventDefault();
+    }
+</script>

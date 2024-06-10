@@ -1,0 +1,219 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|c:\\users\\ssd\\desktop\\files\\razor pay(rest)\\webapplication2\\controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|solutionrelative:controllers\\paymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|c:\\users\\ssd\\desktop\\files\\razor pay(rest)\\webapplication2\\services\\razorpaypaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|solutionrelative:services\\razorpaypaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|c:\\users\\ssd\\desktop\\files\\razor pay(rest)\\webapplication2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|c:\\users\\ssd\\desktop\\files\\razor pay(rest)\\webapplication2\\models\\razorpaywebhookpayload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|solutionrelative:models\\razorpaywebhookpayload.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|c:\\users\\ssd\\desktop\\files\\razor pay(rest)\\webapplication2\\views\\payments\\paymentpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|solutionrelative:views\\payments\\paymentpage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|c:\\users\\ssd\\desktop\\files\\razor pay(rest)\\webapplication2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|c:\\users\\ssd\\desktop\\files\\razor pay(rest)\\webapplication2\\views\\payments\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|solutionrelative:views\\payments\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|c:\\users\\ssd\\desktop\\files\\razor pay(rest)\\webapplication2\\views\\payments\\failure.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|solutionrelative:views\\payments\\failure.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|c:\\users\\ssd\\desktop\\files\\razor pay(rest)\\webapplication2\\views\\payments\\createorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|solutionrelative:views\\payments\\createorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|c:\\users\\ssd\\desktop\\files\\razor pay(rest)\\webapplication2\\models\\razorpaysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|solutionrelative:models\\razorpaysettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|c:\\users\\ssd\\desktop\\files\\razor pay(rest)\\webapplication2\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{56500E7F-FE86-4CCF-88CC-9EE4B7B3DBCF}|WebApplication2.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PaymentPage.cshtml",
+              "DocumentMoniker": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Views\\Payments\\PaymentPage.cshtml",
+              "RelativeDocumentMoniker": "Views\\Payments\\PaymentPage.cshtml",
+              "ToolTip": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Views\\Payments\\PaymentPage.cshtml",
+              "RelativeToolTip": "Views\\Payments\\PaymentPage.cshtml",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAcwCwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-06T05:45:32.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Success.cshtml",
+              "DocumentMoniker": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Views\\Payments\\Success.cshtml",
+              "RelativeDocumentMoniker": "Views\\Payments\\Success.cshtml",
+              "ToolTip": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Views\\Payments\\Success.cshtml",
+              "RelativeToolTip": "Views\\Payments\\Success.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-06T05:46:55.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-06T05:47:54.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAgwB0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T05:43:15.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PaymentsController.cs",
+              "DocumentMoniker": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Controllers\\PaymentsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PaymentsController.cs",
+              "ToolTip": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Controllers\\PaymentsController.cs",
+              "RelativeToolTip": "Controllers\\PaymentsController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAASwEAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T05:41:17.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RazorpayPaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Services\\RazorpayPaymentService.cs",
+              "RelativeDocumentMoniker": "Services\\RazorpayPaymentService.cs",
+              "ToolTip": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Services\\RazorpayPaymentService.cs",
+              "RelativeToolTip": "Services\\RazorpayPaymentService.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAASwDAAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T05:42:04.432Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RazorpayWebhookPayload.cs",
+              "DocumentMoniker": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Models\\RazorpayWebhookPayload.cs",
+              "RelativeDocumentMoniker": "Models\\RazorpayWebhookPayload.cs",
+              "ToolTip": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Models\\RazorpayWebhookPayload.cs",
+              "RelativeToolTip": "Models\\RazorpayWebhookPayload.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T07:33:48.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Failure.cshtml",
+              "DocumentMoniker": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Views\\Payments\\Failure.cshtml",
+              "RelativeDocumentMoniker": "Views\\Payments\\Failure.cshtml",
+              "ToolTip": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Views\\Payments\\Failure.cshtml",
+              "RelativeToolTip": "Views\\Payments\\Failure.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-06T05:47:40.702Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateOrder.cshtml",
+              "DocumentMoniker": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Views\\Payments\\CreateOrder.cshtml",
+              "RelativeDocumentMoniker": "Views\\Payments\\CreateOrder.cshtml",
+              "ToolTip": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Views\\Payments\\CreateOrder.cshtml",
+              "RelativeToolTip": "Views\\Payments\\CreateOrder.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-06T05:44:57.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RazorpaySettings.cs",
+              "DocumentMoniker": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Models\\RazorpaySettings.cs",
+              "RelativeDocumentMoniker": "Models\\RazorpaySettings.cs",
+              "ToolTip": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Models\\RazorpaySettings.cs",
+              "RelativeToolTip": "Models\\RazorpaySettings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T05:41:38.301Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\SSD\\Desktop\\Files\\Razor pay(rest)\\WebApplication2\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "Models\\ErrorViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T15:01:10.485Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,10 +1,13 @@
-name: Main Branch Workflow
+name: Razorpayv2 Main Branch Workflow
 on:
   workflow_dispatch:
+    branchs: 
+      - razorpayv2
     inputs:
       trigger:
         description: 'Trigger the workflow manually'
         required: true
+    
 jobs:
   deploy:
     name: Deploy to EC2 on master branch push
