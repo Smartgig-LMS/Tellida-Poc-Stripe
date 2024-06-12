@@ -1,5 +1,7 @@
 ﻿using Razorpay.Api;
+using System;
 using System.Collections.Generic;
+using WebApplication2.Models;
 
 public class RazorpayPaymentService
 {
@@ -31,10 +33,12 @@ public class RazorpayPaymentService
     {
         RazorpayClient client = new RazorpayClient(_key, _secret);
 
-        Dictionary<string, string> attributes = new Dictionary<string, string>();
-        attributes.Add("razorpay_order_id", razorpayOrderId);
-        attributes.Add("razorpay_payment_id", razorpayPaymentId);
-        attributes.Add("razorpay_signature", razorpaySignature);
+        Dictionary<string, string> attributes = new Dictionary<string, string>
+        {
+            { "razorpay_order_id", razorpayOrderId },
+            { "razorpay_payment_id", razorpayPaymentId },
+            { "razorpay_signature", razorpaySignature }
+        };
 
         try
         {
@@ -53,4 +57,40 @@ public class RazorpayPaymentService
         return _key;
     }
 
+    public PaymentDetails FetchPaymentDetails(string paymentId)
+    {
+        if (string.IsNullOrEmpty(paymentId))
+        {
+            // Log or handle the case where the paymentId is null or empty
+            throw new ArgumentNullException(nameof(paymentId), "Payment ID is null or empty");
+        }
+        RazorpayClient client = new RazorpayClient(_key, _secret);
+
+        try
+        {
+            var payment = client.Payment.Fetch(paymentId);
+
+            // Create a new PaymentDetails object and populate its properties
+            var paymentDetails = new PaymentDetails
+            {
+                OrderId = payment["order_id"],
+                PaymentId = payment["id"],
+                Currency = payment["currency"],
+                Amount = Convert.ToDecimal(payment["amount"]),
+                CustomerName = payment["customer_name"],
+                CustomerEmail = payment["customer_email"],
+                Description = payment["description"],
+                Status = payment["status"],
+                PaymentMethod = payment["method"],
+                CreatedAt = DateTime.UtcNow
+            };
+
+            return paymentDetails;
+        }
+        catch (Exception ex)
+        {
+            // Log the exception or handle it appropriately
+            throw new Exception("Failed to fetch payment details from Razorpay API", ex);
+        }
+    }
 }
