@@ -33,7 +33,7 @@ public class PaymentsController : Controller
     {
         return View();
     }
-
+//create method for order
     [HttpPost]
     public async Task<IActionResult> CreateOrder(decimal amount, string currency, string receipt, string name, string email, string description)
     {
