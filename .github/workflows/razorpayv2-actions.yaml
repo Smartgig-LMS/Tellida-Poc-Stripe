@@ -1,3 +1,4 @@
+
 name: Razorpayv2 Main Branch Workflow
 on:
   workflow_dispatch:
@@ -17,6 +18,17 @@ jobs:
       - name: Checkout the files
         uses: actions/checkout@v2
 
+      - name: Executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DNS }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            sudo docker-compose -f razorpay/WebApplication2/docker-compose.yaml down
+            sudo docker rmi razorimage3
+	          rm -rf razorpay
+            
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
@@ -35,4 +47,3 @@ jobs:
             cd razorpay
             chmod +x start.sh
             ./start.sh &
-
