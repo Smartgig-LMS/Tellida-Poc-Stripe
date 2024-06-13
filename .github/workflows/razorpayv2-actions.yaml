@@ -27,7 +27,7 @@ jobs:
           script: |
             sudo docker-compose -f razorpay/WebApplication2/docker-compose.yaml down
             sudo docker rmi razorimage3
-	          rm -rf razorpay
+	    rm -rf razorpay
             
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
