@@ -10,7 +10,7 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2" />
     <PackageReference Include="MongoDB.Bson" Version="2.26.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.26.0" />
-    <PackageReference Include="Razorpay" Version="3.1.2" />
+    <PackageReference Include="RazorPay.Core" Version="1.0.2" />
   </ItemGroup>
 
 </Project>
