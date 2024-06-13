@@ -1,3 +1,7 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using WebApplication2.Models;
 using WebApplication2.Services;
 
@@ -8,14 +12,17 @@ builder.Services.AddControllersWithViews();
 builder.Services.Configure<RazorpaySettings>(builder.Configuration.GetSection("Razorpay"));
 builder.Services.AddSingleton<MongoDBService>();
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
-    app.UseHsts();
+    app.UseDeveloperExceptionPage(); // Use detailed error page only in Development
+}
+else
+{
+    app.UseExceptionHandler("/Home/Error"); // Use a generic error page or endpoint in Production
+    app.UseHsts(); // Optionally enable HTTP Strict Transport Security (HSTS)
 }
 
 app.UseHttpsRedirection();
