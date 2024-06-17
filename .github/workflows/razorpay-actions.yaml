@@ -1,4 +1,4 @@
-name: Razorpay Main Branch Workflow
+name: Razorpayv2 Main Branch Workflow
 on:
   workflow_dispatch:
     branchs: 
@@ -7,6 +7,7 @@ on:
       trigger:
         description: 'Trigger the workflow manually'
         required: true
+    
 jobs:
   deploy:
     name: Deploy to EC2 on master branch push
@@ -16,6 +17,17 @@ jobs:
       - name: Checkout the files
         uses: actions/checkout@v2
 
+      - name: Executing remote ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_DNS }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            sudo docker-compose -f razorpay/RazorPay_Payment/docker-compose.yaml down
+            sudo docker rmi razorpayimage
+            rm -rf razorpay
+            
       - name: Deploy to Server 1
         uses: easingthemes/ssh-deploy@main
         env:
