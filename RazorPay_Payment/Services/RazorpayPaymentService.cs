@@ -1,10 +1,10 @@
-﻿using Microsoft.Extensions.Primitives;
-using Razorpay.Api;
+﻿using Razorpay.Api;
+using System;
 using System.Collections.Generic;
-using System.Security.Cryptography;
-using System.Text;
+using Razorpay_Payment.Models;
+using RazorPay_Payment.Interface;
 
-public class RazorpayPaymentService
+public class RazorpayPaymentService : IRazorpayPaymentService
 {
     private readonly string _key;
     private readonly string _secret;
@@ -20,47 +20,42 @@ public class RazorpayPaymentService
         RazorpayClient client = new RazorpayClient(_key, _secret);
 
         var options = new Dictionary<string, object>
-        {
-            { "amount", amount * 100 }, // Amount in the smallest currency unit
-            { "currency", currency },
-            { "receipt", receipt },
-            { "payment_capture", 1 } // Auto capture
-        };
+            {
+                { "amount", amount * 100 }, // Amount in the smallest currency unit
+                { "currency", currency },
+                { "receipt", receipt },
+                { "payment_capture", 1 } // Auto capture
+            };
 
         return client.Order.Create(options);
     }
 
     public bool VerifyPaymentSignature(string razorpayOrderId, string razorpayPaymentId, string razorpaySignature)
     {
-        var attributes = new Dictionary<string, string>
-        {
-            { "razorpay_order_id", razorpayOrderId },
-            { "razorpay_payment_id", razorpayPaymentId },
-            { "razorpay_signature", razorpaySignature }
-        };
+        RazorpayClient client = new RazorpayClient(_key, _secret);
+
+        Dictionary<string, string> attributes = new Dictionary<string, string>
+            {
+                { "razorpay_order_id", razorpayOrderId },
+                { "razorpay_payment_id", razorpayPaymentId },
+                { "razorpay_signature", razorpaySignature }
+            };
 
         try
         {
-           Utils.verifyPaymentSignature(attributes);
-            return true;
+            Utils.verifyPaymentSignature(attributes);
+            return true; // Signature is verified
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-            return false;
+            // Log the exception or handle it appropriately
+            return false; // Signature verification failed
         }
     }
 
-    public bool VerifyWebhookSignature(string payload, string signature)
+    public string GetKey()
     {
-        var secret = Encoding.UTF8.GetBytes(_secret);
-        var payloadBytes = Encoding.UTF8.GetBytes(payload);
-
-        using (var hmac = new HMACSHA256(secret))
-        {
-            var hash = hmac.ComputeHash(payloadBytes);
-            var hashString = BitConverter.ToString(hash).Replace("-", "").ToLower();
-
-            return hashString.Equals(signature);
-        }
+        return _key;
     }
+
 }
