@@ -1,10 +1,10 @@
 version: '3.8'
 services:
  organisationdev:
-  image: razorimage3
+  image: razorpayimage
   ports:
    - 8080:8080
-  container_name: razor_organisationdev
+  container_name: razorpay_dev
   deploy:
     replicas: 1
   restart: always
