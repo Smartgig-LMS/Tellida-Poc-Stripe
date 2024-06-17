@@ -1,4 +1,4 @@
-name: Razorpayv2 Main Branch Workflow
+name: Razorpay Branch Workflow
 on:
   workflow_dispatch:
     branchs: 
